@@ -11,6 +11,45 @@ p {
 canvas {
   border: 1px solid black;
 }
+.copi {
+    text-align: center;
+    color: #FF30;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.controls {
+    padding-bottom: 15px;
+    font-style: underlined;
+}
+.loadercontent {
+    padding-top: 30%;
+    color: #C4C4C4;
+    font-family: LeagueGothic;
+    font-size: 1.4em;
+}
+.beschreibung {
+    padding-top: 30%;
+    padding-right: 80px;
+    padding-left: 80px;
+    color: #C4C4C4;
+    font-family: LeagueGothic;
+    font-size: 1.4em;
+}
+.titel {
+    color: #f6f751;
+    font-family: LeagueGothic;
+    font-size: 3.4em;
+    text-transform: uppercase;
+}
+.titelleft {
+    float: right;
+    padding-right: 50px;
+}
+.titelright {
+    padding-right: 20px;
+    float: left;
+}
 #loader-wrapper {
     position: fixed;
     top: 0;
