@@ -11,6 +11,9 @@ p {
 canvas {
   border: 1px solid black;
 }
+#timer {
+    color: gray;
+}
 .copi {
     text-align: center;
     color: #FF30;
@@ -23,13 +26,13 @@ canvas {
     font-style: underlined;
 }
 .loadercontent {
-    padding-top: 30%;
+    padding-top: 20%;
     color: #C4C4C4;
     font-family: LeagueGothic;
     font-size: 1.4em;
 }
 .beschreibung {
-    padding-top: 30%;
+    padding-top: 20%;
     padding-right: 80px;
     padding-left: 80px;
     color: #C4C4C4;
