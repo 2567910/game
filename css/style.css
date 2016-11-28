@@ -1,15 +1,32 @@
+/* Image credit too: http://weknowyourdreams.com  (I know its way to big.)*/
 body {
-
-  text-align: center;
+    background-image: url(http://weknowyourdreams.com/images/space/space-04.jpg);
+    text-align: center;
+    background-position: center;
 }
 h1 {
   font-family: Impact, sans-serif;
+    color: #FF30;
 }
 p {
   margin: 0;
+  color: #FF30;
+  font-weight: 3em;
 }
-canvas {
-  border: 1px solid black;
+footer {
+    background-color: #FFFFFF;
+    opacity: 0.5;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.leaders {
+    background-color: #FFFFFF;
+    opacity: 0.5;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+#timer {
+    color: gray;
 }
 .copi {
     text-align: center;
@@ -23,13 +40,13 @@ canvas {
     font-style: underlined;
 }
 .loadercontent {
-    padding-top: 30%;
+    padding-top: 20%;
     color: #C4C4C4;
     font-family: LeagueGothic;
     font-size: 1.4em;
 }
 .beschreibung {
-    padding-top: 30%;
+    padding-top: 20%;
     padding-right: 80px;
     padding-left: 80px;
     color: #C4C4C4;

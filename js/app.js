@@ -10,7 +10,7 @@ function getDifficulty() {
 
 function randomInteger(minimum, maximum) {
   return Math.floor(Math.random()*(maximum - minimum + 1) + minimum);
-} //random integer function: http://stackoverflow.com/questions/4959975/generate-random-value-between-two-numbers-in-javascript
+}
 
 
 function selectRandom(array) {
@@ -173,3 +173,19 @@ document.addEventListener('keyup', function(e) {
 
   player.handleInput(allowedKeys[e.keyCode]);
 });
+//timer
+var count=10;
+
+var counter=setInterval(timer, 1000);
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+
+ document.getElementById("timer").innerHTML=count + " seconds";
+}
