@@ -36,7 +36,7 @@ Actor.prototype.render = function() {
 
 // Enemy
 var Enemy = function(x, y, sprite) {
-  sprite = sprite || 'images/enemy-bug.png';
+  sprite = sprite || 'images/rocked.png';
   Actor.call(this, x, y, sprite);
   this.speed = 100;
 };
@@ -62,7 +62,7 @@ Enemy.prototype.update = function(dt) {
 
 // Player
 var Player = function(x, y, sprite) {
-  sprite = sprite || 'images/char-boy.png';
+  sprite = sprite || 'images/rock.png';
   x = x || 200;
   y = y || 400;
   Actor.call(this, x, y, sprite);
@@ -118,7 +118,7 @@ Player.prototype.reset = function() {
 
 // Prize
 var Prize = function(x, y, sprite) {
-  sprite = sprite || 'images/Star.png';
+  sprite = sprite || 'images/earth.png';
   x = x || 200;
   y = y || 68;
   Actor.call(this, x, y, sprite);
@@ -139,7 +139,7 @@ Prize.prototype.update = function(dt) {
 
 // Start
 var Start = function(x, y, sprite) {
-  sprite = sprite || 'images/Selector.png';
+  sprite = sprite || 'images/blackhole.png';
   x = x || 200;
   y = y || 375;
   Actor.call(this, x, y, sprite);
