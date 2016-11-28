@@ -56,6 +56,7 @@
         isReady: isReady
     };
 })();
+//start animation?
 $(document).ready(function() {
 
     setTimeout(function(){
