@@ -1,11 +1,11 @@
 // global variables
-var playerScore = 0;
-var stepX = 101;
-var stepY = 83;
+var PLAYERSCORE = 0;
+var STEPX = 101;
+var STEPY = 83;
 // common functions
 function getDifficulty() {
   var step = 25;
-  return playerScore * step;
+  return PLAYERSCORE * step;
 }
 
 function randomInteger(minimum, maximum) {
@@ -75,22 +75,22 @@ Player.prototype.update = function() {
   switch(this.action) {
     case 'up':
       if (this.y > canvas.boundaries.up) {
-        this.y -= stepY;
+        this.y -= STEPY;
       }
       break;
     case 'right':
       if (this.x < canvas.boundaries.right) {
-        this.x += stepX;
+        this.x += STEPX;
       }
       break;
     case 'down':
       if (this.y < canvas.boundaries.down) {
-        this.y += stepY;
+        this.y += STEPY;
       }
       break;
     case 'left':
       if (this.x > canvas.boundaries.left) {
-        this.x -= stepX;
+        this.x -= STEPX;
       }
       break;
   }
@@ -132,8 +132,8 @@ Prize.prototype.update = function(dt) {
   if (checkCollision(this, player)) {
     player.reset();
     this.x = selectRandom(this.startX);
-    playerScore += 1;
-    $('#score').text(playerScore);
+    PLAYERSCORE += 1;
+    $('#score').text(PLAYERSCORE);
   }
 };
 
