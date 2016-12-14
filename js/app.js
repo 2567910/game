@@ -17,19 +17,19 @@ function selectRandom(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function checkCollision(object, player) {
-  return (player.x > object.x - object.hitBox.x/2 &&
-          player.x < object.x + object.hitBox.x/2 &&
-          player.y > object.y - object.hitBox.y/2 &&
-          player.y < object.y + object.hitBox.y/2);
-}
-
 
 var Actor = function(x, y, sprite) {
   this.sprite = sprite;
   this.x = x;
   this.y = y;
 };
+Actor.prototype.checkCollision = function () {
+  return (player.x > this.x - this.hitBox.x/2 &&
+          player.x < this.x + this.hitBox.x/2 &&
+          player.y > this.y - this.hitBox.y/2 &&
+          player.y < this.y + this.hitBox.y/2);
+}
+
 Actor.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
@@ -55,7 +55,7 @@ Enemy.prototype.update = function(dt) {
   }
 
   // handle collisions with player
-  if (checkCollision(this, player)) {
+  if (this.checkCollision()) {
     player.reset();
   }
 };
@@ -129,7 +129,7 @@ Prize.prototype.startX = [-2, 99, 200, 301, 402];
 Prize.prototype.constructor = Prize;
 Prize.prototype.update = function(dt) {
   // handle collisions with player
-  if (checkCollision(this, player)) {
+  if (this.checkCollision()) {
     player.reset();
     this.x = selectRandom(this.startX);
     PLAYERSCORE += 1;
@@ -178,11 +178,9 @@ var count=10;
 
 var counter=setInterval(timer, 1000);
 
-function timer()
-{
+function timer(){
   count=count-1;
-  if (count <= 0)
-  {
+  if (count <= 0){
      clearInterval(counter);
      return;
   }
